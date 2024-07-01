@@ -33,7 +33,7 @@
 
     gui(Image, {ImageTransparency = 0},0.3)
     gui(Blur, {Size = 20},0.3)
-    wait(3)
+    wait(1.75)
     gui(Image, {ImageTransparency = 1},0.3)
     gui(Blur, {Size = 0},0.3)
     wait(0.3)

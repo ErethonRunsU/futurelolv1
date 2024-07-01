@@ -37,3 +37,4 @@
     gui(Image, {ImageTransparency = 1},0.3)
     gui(Blur, {Size = 0},0.3)
     wait(0.3)
+    game.Players.LocalPlayer.PlayerGui.SpashScreen:Destroy()

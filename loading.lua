@@ -22,7 +22,7 @@
     local Blur = Instance.new("BlurEffect")
     Blur.Parent = game.Lighting
     Blur.Size = 0
-    Blur.Name = math.random(1,123123)
+    Blur.Name = "blurfutur"
 
 
     local function gui(last, sex, t, s, inorout)
@@ -37,4 +37,5 @@
     gui(Image, {ImageTransparency = 1},0.3)
     gui(Blur, {Size = 0},0.3)
     wait(0.3)
+    game.Lighting.blurfutur:Destroy()
     game.CoreGui.SpashScreen:Destroy()

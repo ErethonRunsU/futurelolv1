@@ -4,8 +4,13 @@
     local newx = math.floor(x * 0.5)
     local newy = math.floor(y * 0.5)
 
+    local changelogx = math.floor(x * 0.6)
+    local changelogy = math.floor(y * 0.5)
+
+
     local SpashScreen = Instance.new("ScreenGui")
     local Image = Instance.new("ImageLabel")
+    local Changelog = Instance.new("TextLabel")
     SpashScreen.Name = "SpashScreen"
     SpashScreen.Parent = game.CoreGui
     SpashScreen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -18,6 +23,18 @@
     Image.Image = "rbxassetid://18207141378"
     Image.ImageTransparency = 1
     Image.AnchorPoint = Vector2.new(0.5,0.5)
+
+
+    Changelog.Name = "Changelog"
+    Changelog.Parent = SpashScreen
+    Changelog.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Changelog.BackgroundTransparency = 1
+    Changelog.Position = UDim2.new(-0.09242, changelogx, 0.1, changelogy)
+    Changelog.Size = UDim2.new(10, 20, 0, 20)
+    Changelog.Text = "[+] Released Best Free Streamable"
+    Changelog.AnchorPoint = Vector2.new(0.5,0.5)
+    Changelog.TextScaled = true
+    Changelog.TextColor3 = Color3.fromRGB(255, 255, 255)
 
     local Blur = Instance.new("BlurEffect")
     Blur.Parent = game.Lighting
@@ -32,9 +49,11 @@
     end
 
     gui(Image, {ImageTransparency = 0},0.3)
+    gui(Changelog, {TextTransparency = 0},0.3)
     gui(Blur, {Size = 20},0.3)
     wait(1.75)
     gui(Image, {ImageTransparency = 1},0.3)
+    gui(Changelog, {TextTransparency = 1},0.3)
     gui(Blur, {Size = 0},0.3)
     wait(0.3)
     game.Lighting.blurfutur:Destroy()
